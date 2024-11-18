@@ -1,6 +1,7 @@
 import argparse
 import os
 import shutil
+import uuid
 from langchain.document_loaders.pdf import PyPDFDirectoryLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.schema.document import Document
@@ -8,8 +9,8 @@ from get_embedding_function import get_embedding_function
 from langchain.vectorstores.chroma import Chroma
 
 
-CHROMA_PATH = "/home/jiyoon/nlp/rag_upstage/chroma"
-DATA_PATH = "/home/jiyoon/nlp/rag_upstage/data"
+CHROMA_PATH = "/home/jiyoon/UpstageNLP_Team8/rag_upstage/chroma"
+DATA_PATH = "/home/jiyoon/UpstageNLP_Team8/rag_upstage/data"
 
 
 def main():
@@ -35,12 +36,19 @@ def load_documents():
 
 def split_documents(documents: list[Document]):
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=800,
-        chunk_overlap=80,
+        chunk_size=100,
+        chunk_overlap=30,
         length_function=len,
         is_separator_regex=False,
     )
-    return text_splitter.split_documents(documents)
+    
+    chunks = text_splitter.split_documents(documents)
+
+    # add chunk size in metadata
+    for chunk in chunks:
+        chunk.metadata["chunk_size"] = len(chunk.page_content)
+        
+    return chunks
 
 
 def add_to_chroma(chunks: list[Document]):
@@ -49,7 +57,7 @@ def add_to_chroma(chunks: list[Document]):
         persist_directory=CHROMA_PATH, embedding_function=get_embedding_function()
     )
 
-    # Calculate Page IDs.
+    # Calculate IDs.
     chunks_with_ids = calculate_chunk_ids(chunks)
 
     # Add or Update the documents.
@@ -74,7 +82,7 @@ def add_to_chroma(chunks: list[Document]):
 
 def calculate_chunk_ids(chunks):
 
-    # This will create IDs like "ewha.pdf:6:2"
+    # This will create IDs like "data/monopoly.pdf:6:2"
     # Page Source : Page Number : Chunk Index
 
     last_page_id = None
