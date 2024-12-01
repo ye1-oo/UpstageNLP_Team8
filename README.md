@@ -109,8 +109,8 @@ We paid particular attention to few-shot prompting. While we experimented with z
 Based on the fact that our base model is a chat model, we discovered that using `ChatPromptTemplate` instead of a standard `PromptTemplate` improved performance. 
       
 **2. Database seperation**     
-We separated the ewha database and the wiki Fetch database. And we configured the system to perform hybrid search independently.      
-That is, if the question is related to ewha, the system does hybrid search only within the ewha database. On the other hand, if the question is related to mmlu, the system does hybrid search only within the mmlu database.    
+We separated the ewha database and the Wiki database. And we configured the system to perform hybrid search independently.      
+That is, if the question is related to ewha, the system does hybrid search only within the ewha database. On the other hand, if the question is related to mmlu, the system does hybrid search only within the Wiki database.    
 
 **3. Separation of Ewha and MMLU Prompts**      
 We separated prompts for ewha-related questions (refer to `configs.yaml > PROMPT_TEMPLATE_EWHA`) and mmlu questions. Additionally, for mmlu-related questions, prompts were further divided by domain:    
