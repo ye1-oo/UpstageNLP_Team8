@@ -13,7 +13,7 @@ The primary objective is to improve accuracy in answering multiple-choice questi
 - Maximum token length: 32,768.
 - External Retrieval Tool: [Wikipedia API](https://pypi.org/project/Wikipedia-API/)
 
-2. **Datasets**
+2. **Test Dataset**
 - Ewha Academic Policies: Data from Ewha University Academic Regulations.
 - MMLU-Pro: QA datasets spanning Law, Psychology, Business, Philosophy, and History. 
 
