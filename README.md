@@ -27,7 +27,7 @@ To try out our project, follow the steps below :
 
 A suitable conda enviroment named `nlp` can be created and activated with:
 ```python
-conda create --name nlp python=3.12.12
+conda create --name nlp python=3.12.7
 conda activate nlp
 ```
 
