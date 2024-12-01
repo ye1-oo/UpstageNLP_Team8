@@ -18,8 +18,8 @@ The primary objective is to improve accuracy in answering multiple-choice questi
 
 3. **Key Rules**
 - No Fine-Tuning: Model retraining is not allowed; only prompt engineering and external retrieval are used.
-- External Retrieval: Information is retrieved using the Wikipedia API
-- Token Constraints: Responses must be concise and fit within the token limit.
+- External Retrieval: Information is retrieved only using the [Wikipedia API](https://pypi.org/project/Wikipedia-API/)
+
 
 ## 2. Project Settings
 To try out our project, follow the steps below :
