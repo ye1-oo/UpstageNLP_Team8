@@ -91,7 +91,7 @@ We constructed our baseline using the following models.
 - **Prompt Template** : langchain.prompts ChatPromptTemplate
   
 ### Project Pipeline
-![Project Pipeline](images/project_pipeline.jpg)
+![Project Pipeline](images/project_pipeline.jpg =250x)
 
 
 
