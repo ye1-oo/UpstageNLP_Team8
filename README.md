@@ -1,6 +1,6 @@
 # Upstage NLP Project (Team8)
 
-## Project Overview
+## 1. Project Overview
 ### Project Objective 
 
 This project aims to build a Retrieval-Augmented Generation (RAG) system using the solar-1-mini-chat LLM by Upstage. The system enhances question-answering performance by integrating prompt engineering, data preprocessing, and external information retrieval. External knowledge is retrieved via the Wiki Search API to provide accurate and reliable answers. 
@@ -20,7 +20,7 @@ This project aims to build a Retrieval-Augmented Generation (RAG) system using t
 - External Retrieval: Information is retrieved via Wiki Search API.
 - Token Constraints: Responses must be concise and fit within the token limit.
 
-## Project Settings
+## 2. Project Settings
 To try out our project, follow the steps below :
 
 ### Requirements
@@ -78,7 +78,7 @@ Finally, you can perform inference with
 python main.py
 ```
 
-## Project Detail
+## 3. Project Detail
 ### Used Models
 We constructed our baseline using the following models.
 - **Baseline LLM** : [Upstage solar-1-mini-chat](https://console.upstage.ai/docs/capabilities/chat) (Required in this project)
@@ -97,8 +97,8 @@ We constructed our baseline using the following models.
 
 
 
-## Contributions
-1. **Jiyoon Jeon (전지윤)**
+## 4. Contributions
+1) **Jiyoon Jeon (전지윤)**
 - Designed pipeline and created baseline code
 - Gathered and polished every code written by team members 
    - Had to study every method used in the project, and invest a lot of time and effort in merging codes with different styles and structures.
@@ -110,21 +110,21 @@ We constructed our baseline using the following models.
   - Made and polished overall structure and format
   - Wrote "Requirements", "Used Models", "Project Detail" part
 
-2. **Kyeongsook Park (박경숙)**
+2) **Kyeongsook Park (박경숙)**
 - Created a keyword extraction prompt and used keyword subsets for Wikipedia search.
 - Implemented semantic splitting with four threshold types.
 - Developed a multi-choice answer extraction method.
 - Extracted problem type and core question for prompt engineering.
 - Created a PowerPoint presentation.
 
-3. **Dain Han (한다인)**
+3) **Dain Han (한다인)**
 - Implemented Wikipedia page fetching using the wikipediaapi library.
 - Built a database using Milvus: created and managed data collections, including HNSW search index.
 - Developed a hybrid search algorithm combining sparse and dense vector-based search functionalities.
 - Implemented post-processing logic to calculate and filter similarity scores based on search results.
 - Generated 50 questions for performance evaluation based on the Ewha Womans University regulations
 
-4. **Yewon Heo (허예원)**
+4) **Yewon Heo (허예원)**
 - PDF Preprocessing: Implemented techniques for efficient data extraction and structuring from PDF files.
 - Prompt Engineering
    - Designed domain-specific templates for Ewha academic regulations and MMLU-Pro datasets.
