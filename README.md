@@ -96,7 +96,8 @@ We constructed our baseline using the following models.
 <img src="images/project_pipeline.jpg" width=600>
 
 ### Our Special Methods
-While running experiments, we found out that when the test question is from the ewha pdf, using Wikipedia search made significant performance degradation. Therefore, **we mainly focused on seperating the ways of handling ewha related questions and mmlu related questions**. To achieve this, we employed three main approaches. :  
+While running experiments, we found out that when the test question is from the ewha pdf, using Wikipedia search made significant performance degradation. Therefore, **we mainly focused on seperating the ways of handling ewha related questions and mmlu related questions**.       
+To achieve this, we employed three main approaches. :  
 
 **1. Checking if question is ewha related**    
 First, we concluded that accurately identifying whether a question is related to ewha is critical for performance. Thus, we used `solar-1-mini-chat` to verify whether a question is related to ewha, returning true if it is and false otherwise. (You can refer to the codes in `util.py > check_chat()`)   
