@@ -89,7 +89,12 @@ We constructed our baseline using the following models.
    - langchain_text_splitters RecursiveCharacterTextSplitter
    - langchain_experimental.text_splitter SemanticChunker
 - **Prompt Template** : langchain.prompts ChatPromptTemplate
+  
 ### Project Pipeline
+![Project Pipeline](images/project_pipeline.jpg)
+
+
+
 
 ## Contributions
 1. **Jiyoon Jeon (전지윤)**
@@ -100,7 +105,6 @@ We constructed our baseline using the following models.
 - Contributed a lot in enhancing performance
    - Found out that using ChatPromptTemplate and 5 shot prompting is very important, and polished every single prompt in order to improve performance.
    - Proposed the idea of separating the database and implemented it, which was a big help to the performance scores.
- 
 - README
   - Made and polished overall structure and format
   - Wrote "Requirements", "Used Models", "Project Detail" part
