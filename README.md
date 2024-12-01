@@ -3,13 +3,15 @@
 ## 1. Project Overview
 ### Project Objective 
 
-This project aims to build a Retrieval-Augmented Generation (RAG) system using the solar-1-mini-chat LLM by Upstage. The system enhances question-answering performance by integrating prompt engineering, data preprocessing, and external information retrieval. External knowledge is retrieved via the Wiki Search API to provide accurate and reliable answers. 
+This project aims to build a Retrieval-Augmented Generation (RAG) system using the solar-1-mini-chat LLM provided by Upstage. By integrating prompt engineering, data preprocessing, and external information retrieval, the system enhances question-answering performance.
+The primary objective is to improve accuracy in answering multiple-choice questions from the Ewha Academic Policies and MMLU-Pro datasets. External knowledge is retrieved using the Wikipedia API to deliver accurate and reliable answers. 
 
 ### Base Conditions
 
 1. **Model**
 - Backbone LLM: [Upstage solar-1-mini-chat](https://console.upstage.ai/docs/capabilities/chat)
 - Maximum token length: 32,768.
+- External Retrieval Tool: [Wikipedia API](https://pypi.org/project/Wikipedia-API/)
 
 2. **Datasets**
 - Ewha Academic Policies: Data from Ewha University Academic Regulations.
@@ -17,7 +19,7 @@ This project aims to build a Retrieval-Augmented Generation (RAG) system using t
 
 3. **Key Rules**
 - No Fine-Tuning: Model retraining is not allowed; only prompt engineering and external retrieval are used.
-- External Retrieval: Information is retrieved via Wiki Search API.
+- External Retrieval: Information is retrieved using the Wikipedia API
 - Token Constraints: Responses must be concise and fit within the token limit.
 
 ## 2. Project Settings
