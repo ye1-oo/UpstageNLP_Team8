@@ -93,7 +93,7 @@ We constructed our baseline using the following models.
 ### Project Pipeline
 <img src="images/project_pipeline.jpg" width=600>
 
-
+### Our Special Methods
 
 
 
@@ -108,7 +108,7 @@ We constructed our baseline using the following models.
    - Proposed the idea of separating the database and implemented it, which was a big help to the performance scores.
 - README
   - Made and polished overall structure and format
-  - Wrote "Requirements", "Used Models", "Project Detail" part
+  - Wrote "Requirements", "Used Models", "Project Pipeline", "Our Special Methods" part
 
 2) **Kyeongsook Park (박경숙)**
 - Created a keyword extraction prompt and used keyword subsets for Wikipedia search.
