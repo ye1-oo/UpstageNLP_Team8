@@ -15,7 +15,7 @@ The primary objective is to improve accuracy in answering multiple-choice questi
 
 2. **Test Dataset**
 - Ewha Academic Policies: Data from Ewha University Academic Regulations.
-- MMLU-Pro: QA datasets spanning Law, Psychology, Business, Philosophy, and History. 
+- MMLU-Pro: MMLU-Pro dataset with limited to 5 domains (Law, Psychology, Business, Philosophy, and History)
 
 3. **Key Rules**
 - No Fine-Tuning: Model retraining is not allowed; only prompt engineering and external retrieval are used.
