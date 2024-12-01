@@ -183,7 +183,7 @@ def hybrid_search(collection, dense_vector, sparse_vector):
 def post_process_results(results):
     """
     Additional post-processing of results. 
-    Removes duplicates, filters results based on similarity_threshold, and sort in descending order of similarity.
+    Removes duplicates and sort in descending order of similarity.
     """
     processed_results = []
     seen_chunks = set() # remove redundant data
