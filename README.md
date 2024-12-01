@@ -17,9 +17,8 @@ The primary objective is to improve accuracy in answering multiple-choice questi
 - MMLU-Pro: MMLU-Pro dataset with limited to 5 domains (Law, Psychology, Business, Philosophy, and History)
 
 3. **Key Rules**
-- No Fine-Tuning: Model retraining is not allowed; only prompt engineering and external retrieval are used.
-- External Retrieval: Information is retrieved only using the [Wikipedia API](https://pypi.org/project/Wikipedia-API/)
-
+- No fine-tuning: Model retraining is not allowed; only prompt engineering and external retrieval are used.
+- Web fetch method limit: Using other web scraping methods other than [Wikipedia API](https://pypi.org/project/Wikipedia-API/) is cohibited.
 
 ## 2. Project Settings
 To try out our project, follow the steps below :
