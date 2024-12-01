@@ -98,21 +98,21 @@ We constructed our baseline using the following models.
 ### Our Special Methods
 While running experiments, we found out that when the test question is from the ewha pdf, using Wikipedia search made significant performance degradation. Therefore, **we mainly focused on seperating the ways of handling ewha related questions and mmlu related questions**. To achieve this, we employed three main approaches. :  
 
-**1. Checking if question is ewha related**
-First, we concluded that accurately identifying whether a question is related to ewha is critical for performance. Thus, we used `solar-1-mini-chat` to verify whether a question is related to ewha, returning true if it is and false otherwise. (You can refer to the codes in `util.py > check_chat()`)
-Two key factors significantly contributed to improving the accuracy of this classification:
-- **Prompt Engineering**:
-We paid particular attention to few-shot prompting. While we experimented with zero-shot, one-shot, and others, we found that a **5-shot** approach delivered the best performance, so we selected and implemented it.
+**1. Checking if question is ewha related**    
+First, we concluded that accurately identifying whether a question is related to ewha is critical for performance. Thus, we used `solar-1-mini-chat` to verify whether a question is related to ewha, returning true if it is and false otherwise. (You can refer to the codes in `util.py > check_chat()`)   
+Two key factors significantly contributed to improving the accuracy of this classification:    
+- **Prompt Engineering**:    
+We paid particular attention to few-shot prompting. While we experimented with zero-shot, one-shot, and others, we found that a **5-shot** approach delivered the best performance, so we selected and implemented it.    
 
-- **ChatPromptTemplate**: 
+- **ChatPromptTemplate**:      
 Based on the fact that our base model is a chat model, we discovered that using `ChatPromptTemplate` instead of a standard `PromptTemplate` improved performance. 
+      
+**2. Database seperation**     
+We separated the ewha database and the wiki Fetch database. And we configured the system to perform hybrid search independently.      
+That is, if the question is related to ewha, the system does hybrid search only within the ewha database. On the other hand, if the question is related to mmlu, the system does hybrid search only within the mmlu database.    
 
-**2. Database seperation**
-We separated the ewha database and the wiki Fetch database. And we configured the system to perform hybrid search independently.
-That is, if the question is related to ewha, the system does hybrid search only within the ewha database. On the other hand, if the question is related to mmlu, the system does hybrid search only within the mmlu database.
-
-**3. Separation of Ewha and MMLU Prompts**
-We separated prompts for ewha-related questions (refer to `configs.yaml > PROMPT_TEMPLATE_EWHA`) and mmlu questions. Additionally, for mmlu-related questions, prompts were further divided by domain:
+**3. Separation of Ewha and MMLU Prompts**      
+We separated prompts for ewha-related questions (refer to `configs.yaml > PROMPT_TEMPLATE_EWHA`) and mmlu questions. Additionally, for mmlu-related questions, prompts were further divided by domain:    
 
 - Domain-specific Prompt Separation for MMLU
  - In `generate_prompt.py > classify_mmlu_domain()`, domains were hard-coded for separation.
