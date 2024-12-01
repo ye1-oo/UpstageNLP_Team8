@@ -116,11 +116,9 @@ That is, if the question is related to ewha, the system does hybrid search only 
 We separated prompts for ewha-related questions (refer to `configs.yaml > PROMPT_TEMPLATE_EWHA`) and mmlu questions. Additionally, for mmlu-related questions, prompts were further divided by domain:    
 
 - Domain-specific Prompt Separation for MMLU
- - In `generate_prompt.py > classify_mmlu_domain()`, domains were hard-coded for separation.
- - In `util.py > extract_question_keywords()`, the problem type was extracted using LLM.
- - In `generate_prompt.py > generate_chat_prompt()`, the final domain was selected based on the above two steps, and a corresponding prompt was generated. Few-shot prompting and `ChatPromptTemplate` were also utilized in this process.
-
-
+  - In `generate_prompt.py > classify_mmlu_domain()`, domains were hard-coded for separation.
+  - In `util.py > extract_question_keywords()`, the problem type was extracted using LLM.
+  - In `generate_prompt.py > generate_chat_prompt()`, the final domain was selected based on the above two steps, and a corresponding prompt was generated. Few-shot prompting and `ChatPromptTemplate` were also utilized in this process.
 
 
 ## 4. Contributions
