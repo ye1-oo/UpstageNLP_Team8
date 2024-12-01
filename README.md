@@ -10,7 +10,6 @@ The primary objective is to improve accuracy in answering multiple-choice questi
 
 1. **Model**
 - Backbone LLM: [Upstage solar-1-mini-chat](https://console.upstage.ai/docs/capabilities/chat)
-- Maximum token length: 32,768.
 - External Retrieval Tool: [Wikipedia API](https://pypi.org/project/Wikipedia-API/)
 
 2. **Test Dataset**
