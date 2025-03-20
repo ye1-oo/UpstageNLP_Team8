@@ -132,28 +132,34 @@ We separated prompts for ewha-related questions (refer to `configs.yaml > PROMPT
   - Made and polished overall structure and format
   - Wrote "Requirements", "Used Models", "Project Pipeline", "Our Special Methods" part
 
-2) **Kyeongsook Park (박경숙)**
+2) **Yewon Heo (허예원)**  
+- Designed and implemented **PDF preprocessing techniques** for extracting and structuring data from Ewha academic regulation documents.  
+  - Developed a structured pipeline to process tables, lists, and paragraphs with minimal data loss.  
+  - Applied multiple parsing methods to ensure consistency in extracted content.  
+- Developed **prompt engineering strategies** for domain-specific question answering.  
+  - Designed structured prompt templates and refined formats to improve model response accuracy.  
+  - Integrated few-shot learning and fallback mechanisms for reliable outputs in varied contexts.  
+- Created and structured **datasets for Ewha academic policies and MMLU-Pro** to enhance retrieval quality.  
+  - Collected, curated, and formatted data to maintain consistency and optimize question-answer pairs.  
+- Contributed to **README documentation**.  
+  - Wrote detailed explanations on dataset creation, preprocessing, and prompt design.  
+  - Enhanced descriptions of key project components for better readability.
+
+3) **Kyeongsook Park (박경숙)**
 - Created a keyword extraction prompt and used keyword subsets for Wikipedia search.
 - Implemented semantic splitting with four threshold types.
 - Developed a multi-choice answer extraction method.
 - Extracted problem type and core question for prompt engineering.
 - Created a PowerPoint presentation.
 
-3) **Dain Han (한다인)**
+4) **Dain Han (한다인)**
 - Implemented Wikipedia page fetching using the wikipediaapi library.
 - Built a database using Milvus: created and managed data collections, including HNSW search index.
 - Developed a hybrid search algorithm combining sparse and dense vector-based search functionalities.
 - Implemented post-processing logic to calculate and filter similarity scores based on search results.
 - Generated 50 questions for performance evaluation based on the Ewha Womans University regulations
 
-4) **Yewon Heo (허예원)**
-- PDF Preprocessing: Implemented techniques for efficient data extraction and structuring from PDF files.
-- Prompt Engineering
-   - Designed domain-specific templates for Ewha academic regulations and MMLU-Pro datasets.
-   - Integrated few-shot learning examples and fallback logic for accurate responses with limited context.
-- Dataset Creation: Curated and organized datasets for Ewha academic policies and MMLU-Pro domains.
-
-5. **Jungmin Byeon (변정민)**
+5) **Jungmin Byeon (변정민)**
 - Proposed idea of contexual retrieval method, implementing sparse and dense vector retrieval splitting methods (semantic, recursive)
 draft for ppt, presentation script
 
